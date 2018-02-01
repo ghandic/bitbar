@@ -6,7 +6,7 @@
 # <bitbar.desc>Hides/shows the desktop</bitbar.desc>
 
 
-function get_darkmode_state {
+function get_state {
 state=`defaults read com.apple.finder CreateDesktop`
 }
 
@@ -19,7 +19,7 @@ if [[ "$1" = "hide" ]]; then
 fi
 
 
-get_darkmode_state;
+get_state;
 if "$state" is true; then
 	echo "🙉"
 	echo "---"
